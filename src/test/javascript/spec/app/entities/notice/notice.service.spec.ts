@@ -20,7 +20,7 @@ describe('Service Tests', () => {
       service = injector.get(NoticeService);
       httpMock = injector.get(HttpTestingController);
 
-      elemDefault = new Notice(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA');
+      elemDefault = new Notice(0, 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA', 'AAAAAAA');
     });
 
     describe('Service methods', () => {
@@ -56,6 +56,7 @@ describe('Service Tests', () => {
           {
             title: 'BBBBBB',
             description: 'BBBBBB',
+            imageurl: 'BBBBBB',
             url: 'BBBBBB',
             hashtags: 'BBBBBB',
           },
@@ -76,6 +77,7 @@ describe('Service Tests', () => {
           {
             title: 'BBBBBB',
             description: 'BBBBBB',
+            imageurl: 'BBBBBB',
             url: 'BBBBBB',
             hashtags: 'BBBBBB',
           },

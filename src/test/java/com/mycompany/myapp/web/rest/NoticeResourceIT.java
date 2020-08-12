@@ -35,6 +35,9 @@ public class NoticeResourceIT {
     private static final String DEFAULT_DESCRIPTION = "AAAAAAAAAA";
     private static final String UPDATED_DESCRIPTION = "BBBBBBBBBB";
 
+    private static final String DEFAULT_IMAGEURL = "AAAAAAAAAA";
+    private static final String UPDATED_IMAGEURL = "BBBBBBBBBB";
+
     private static final String DEFAULT_URL = "AAAAAAAAAA";
     private static final String UPDATED_URL = "BBBBBBBBBB";
 
@@ -62,6 +65,7 @@ public class NoticeResourceIT {
         Notice notice = new Notice()
             .title(DEFAULT_TITLE)
             .description(DEFAULT_DESCRIPTION)
+            .imageurl(DEFAULT_IMAGEURL)
             .url(DEFAULT_URL)
             .hashtags(DEFAULT_HASHTAGS);
         return notice;
@@ -76,6 +80,7 @@ public class NoticeResourceIT {
         Notice notice = new Notice()
             .title(UPDATED_TITLE)
             .description(UPDATED_DESCRIPTION)
+            .imageurl(UPDATED_IMAGEURL)
             .url(UPDATED_URL)
             .hashtags(UPDATED_HASHTAGS);
         return notice;
@@ -102,6 +107,7 @@ public class NoticeResourceIT {
         Notice testNotice = noticeList.get(noticeList.size() - 1);
         assertThat(testNotice.getTitle()).isEqualTo(DEFAULT_TITLE);
         assertThat(testNotice.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
+        assertThat(testNotice.getImageurl()).isEqualTo(DEFAULT_IMAGEURL);
         assertThat(testNotice.getUrl()).isEqualTo(DEFAULT_URL);
         assertThat(testNotice.getHashtags()).isEqualTo(DEFAULT_HASHTAGS);
     }
@@ -139,6 +145,7 @@ public class NoticeResourceIT {
             .andExpect(jsonPath("$.[*].id").value(hasItem(notice.getId().intValue())))
             .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE)))
             .andExpect(jsonPath("$.[*].description").value(hasItem(DEFAULT_DESCRIPTION)))
+            .andExpect(jsonPath("$.[*].imageurl").value(hasItem(DEFAULT_IMAGEURL)))
             .andExpect(jsonPath("$.[*].url").value(hasItem(DEFAULT_URL)))
             .andExpect(jsonPath("$.[*].hashtags").value(hasItem(DEFAULT_HASHTAGS)));
     }
@@ -156,6 +163,7 @@ public class NoticeResourceIT {
             .andExpect(jsonPath("$.id").value(notice.getId().intValue()))
             .andExpect(jsonPath("$.title").value(DEFAULT_TITLE))
             .andExpect(jsonPath("$.description").value(DEFAULT_DESCRIPTION))
+            .andExpect(jsonPath("$.imageurl").value(DEFAULT_IMAGEURL))
             .andExpect(jsonPath("$.url").value(DEFAULT_URL))
             .andExpect(jsonPath("$.hashtags").value(DEFAULT_HASHTAGS));
     }
@@ -182,6 +190,7 @@ public class NoticeResourceIT {
         updatedNotice
             .title(UPDATED_TITLE)
             .description(UPDATED_DESCRIPTION)
+            .imageurl(UPDATED_IMAGEURL)
             .url(UPDATED_URL)
             .hashtags(UPDATED_HASHTAGS);
 
@@ -196,6 +205,7 @@ public class NoticeResourceIT {
         Notice testNotice = noticeList.get(noticeList.size() - 1);
         assertThat(testNotice.getTitle()).isEqualTo(UPDATED_TITLE);
         assertThat(testNotice.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
+        assertThat(testNotice.getImageurl()).isEqualTo(UPDATED_IMAGEURL);
         assertThat(testNotice.getUrl()).isEqualTo(UPDATED_URL);
         assertThat(testNotice.getHashtags()).isEqualTo(UPDATED_HASHTAGS);
     }

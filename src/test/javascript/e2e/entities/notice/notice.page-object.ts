@@ -31,6 +31,7 @@ export class NoticeUpdatePage {
 
   titleInput = element(by.id('field_title'));
   descriptionInput = element(by.id('field_description'));
+  imageurlInput = element(by.id('field_imageurl'));
   urlInput = element(by.id('field_url'));
   hashtagsInput = element(by.id('field_hashtags'));
 
@@ -55,6 +56,14 @@ export class NoticeUpdatePage {
 
   async getDescriptionInput(): Promise<string> {
     return await this.descriptionInput.getAttribute('value');
+  }
+
+  async setImageurlInput(imageurl: string): Promise<void> {
+    await this.imageurlInput.sendKeys(imageurl);
+  }
+
+  async getImageurlInput(): Promise<string> {
+    return await this.imageurlInput.getAttribute('value');
   }
 
   async setUrlInput(url: string): Promise<void> {

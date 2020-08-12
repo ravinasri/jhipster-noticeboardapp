@@ -5,6 +5,7 @@ export interface INotice {
   id?: number;
   title?: string;
   description?: string;
+  imageurl?: string;
   url?: string;
   hashtags?: string;
   author?: IAuthor;
@@ -16,6 +17,7 @@ export class Notice implements INotice {
     public id?: number,
     public title?: string,
     public description?: string,
+    public imageurl?: string,
     public url?: string,
     public hashtags?: string,
     public author?: IAuthor,

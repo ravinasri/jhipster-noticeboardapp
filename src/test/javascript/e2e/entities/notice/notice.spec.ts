@@ -43,6 +43,7 @@ describe('Notice e2e test', () => {
     await promise.all([
       noticeUpdatePage.setTitleInput('title'),
       noticeUpdatePage.setDescriptionInput('description'),
+      noticeUpdatePage.setImageurlInput('imageurl'),
       noticeUpdatePage.setUrlInput('url'),
       noticeUpdatePage.setHashtagsInput('hashtags'),
       noticeUpdatePage.authorSelectLastOption(),
@@ -51,6 +52,7 @@ describe('Notice e2e test', () => {
 
     expect(await noticeUpdatePage.getTitleInput()).to.eq('title', 'Expected Title value to be equals to title');
     expect(await noticeUpdatePage.getDescriptionInput()).to.eq('description', 'Expected Description value to be equals to description');
+    expect(await noticeUpdatePage.getImageurlInput()).to.eq('imageurl', 'Expected Imageurl value to be equals to imageurl');
     expect(await noticeUpdatePage.getUrlInput()).to.eq('url', 'Expected Url value to be equals to url');
     expect(await noticeUpdatePage.getHashtagsInput()).to.eq('hashtags', 'Expected Hashtags value to be equals to hashtags');
 
