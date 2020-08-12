@@ -25,6 +25,7 @@
                     <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterNoticeBoardApp.notice.title">Title</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterNoticeBoardApp.notice.description">Description</span></th>
+                    <th scope="col" ><span jhiTranslate="jhipsterNoticeBoardApp.notice.imageurl">Imageurl</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterNoticeBoardApp.notice.url">Url</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterNoticeBoardApp.notice.hashtags">Hashtags</span></th>
                     <th scope="col" ><span jhiTranslate="jhipsterNoticeBoardApp.notice.author">Author</span></th>
@@ -37,6 +38,7 @@
                     <td><a [routerLink]="['/notice', notice.id, 'view']">{{ notice.id }}</a></td>
                     <td>{{ notice.title }}</td>
                     <td>{{ notice.description }}</td>
+                    <td>{{ notice.imageurl }}</td>
                     <td>{{ notice.url }}</td>
                     <td>{{ notice.hashtags }}</td>
                     <td>

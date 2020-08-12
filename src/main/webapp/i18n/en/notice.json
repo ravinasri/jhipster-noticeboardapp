@@ -18,6 +18,7 @@
       },
       "title": "Title",
       "description": "Description",
+      "imageurl": "Imageurl",
       "url": "Url",
       "hashtags": "Hashtags",
       "author": "Author",

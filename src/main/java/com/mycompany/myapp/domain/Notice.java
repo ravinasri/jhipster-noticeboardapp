@@ -28,6 +28,9 @@ public class Notice implements Serializable {
     @Column(name = "description")
     private String description;
 
+    @Column(name = "imageurl")
+    private String imageurl;
+
     @Column(name = "url")
     private String url;
 
@@ -75,6 +78,19 @@ public class Notice implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
+
+    public Notice imageurl(String imageurl) {
+        this.imageurl = imageurl;
+        return this;
+    }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 
     public String getUrl() {
@@ -153,6 +169,7 @@ public class Notice implements Serializable {
             "id=" + getId() +
             ", title='" + getTitle() + "'" +
             ", description='" + getDescription() + "'" +
+            ", imageurl='" + getImageurl() + "'" +
             ", url='" + getUrl() + "'" +
             ", hashtags='" + getHashtags() + "'" +
             "}";

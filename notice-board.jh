@@ -15,6 +15,7 @@ entity Notice
 {
 title String,
 description String,
+imageurl String,
 url String,
 hashtags String
 
